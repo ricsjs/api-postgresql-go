@@ -2,6 +2,7 @@ package models
 
 import "api-postgresql/db"
 
+//abrir conexão com banco de dados
 func Insert(todo Todo) (id int64, err error) {
 	conn, err := db.OpenConnection()
 
