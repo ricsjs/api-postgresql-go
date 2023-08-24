@@ -20,7 +20,7 @@ func GetAll() (todos []Todo, err error) {
 	for rows.Next() {
 		var todo Todo
 		//passar valores para a variável
-		err = rows.Scan(*&todo.ID, *&todo.Title, *&todo.Description, *&todo.Done)
+		err = rows.Scan(&todo.ID, &todo.Title, &todo.Description, &todo.Done)
 		if err != nil {
 			continue
 		}
